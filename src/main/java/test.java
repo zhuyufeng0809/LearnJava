@@ -1,4 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author zhuyufeng
@@ -8,18 +11,18 @@ import java.util.Arrays;
  */
 public class test {
 
-    private String filter;
     public static void main(String[] args) {
-        test testA = new test();
-        testA.setFilter("my");
-        testA.printFilter();
-    }
+        String a = "strA";
+        String b = "strB";
 
-    private void setFilter(String filter) {
-        this.filter = filter;
-    }
+        List<String> result = new ArrayList<>();
 
-    private void printFilter() {
-        System.out.println(this.filter);
+        result.add(a);
+
+
+
+        String r = result.stream()
+                .collect(Collectors.joining(" AND "));
+
     }
 }
